@@ -73,8 +73,10 @@ public class Testing extends HttpServlet {
         flg = false;
         for(Pair<String,String> pair : Main.names){
             if(pair.getValue().equals(name)){
-                if(pair.getKey().equals(subbuff[0]))
+                if(pair.getKey().equals(subbuff[0])) {
                     resp.getWriter().println("The user is " + pair.getValue() + " and he works at " + pair.getKey() + " company.");
+                    return;
+                }
                 else {
                     resp.sendError(412,"The parameter 'name' or 'company' is incorrect!");
                     return;

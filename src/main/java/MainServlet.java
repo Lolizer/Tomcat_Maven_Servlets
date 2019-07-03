@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.rmi.ServerException;
 
-@WebServlet("/register/")
+@WebServlet("/register")
 public class MainServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp)throws ServerException, IOException {
